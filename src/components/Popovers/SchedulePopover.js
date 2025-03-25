@@ -76,7 +76,7 @@ const SchedulePopover = ({ isOpen, onClose }) => {
   const fetchAvailableSlots = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/available_slots/`);
+      const response = await axios.get(`https://estate-backend-lsps.onrender.com/api/available_slots/`);
       console.log("Raw API Response:", response.data);
 
       const formattedSlots = {};
