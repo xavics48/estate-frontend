@@ -7,7 +7,7 @@ const BlogRecommendedSection = () => {
   const [recommendedPosts, setRecommendedPosts] = useState([]);
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:8000/api/blogs/")
+    axios.get("https://estate-backend-lsps.onrender.com/api/blogs/")
       .then(response => setRecommendedPosts(response.data.slice(0,3)))
       .catch(error => console.error("Error fetching recommended blogs:", error));
   }, []);
