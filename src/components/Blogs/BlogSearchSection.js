@@ -10,7 +10,7 @@ const BlogSearchSection = () => {
   const [blogPosts, setBlogPosts] = useState([]);
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:8000/api/blogs/")
+    axios.get("https://estate-backend-lsps.onrender.com/api/blogs/")
       .then(response => setBlogPosts(response.data))
       .catch(error => console.error("Error fetching blogs:", error));
   }, []);
