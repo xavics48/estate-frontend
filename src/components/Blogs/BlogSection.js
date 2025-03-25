@@ -8,7 +8,7 @@ const BlogSection = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/blogs/`)
+    axios.get(`https://estate-backend-lsps.onrender.com/api/blogs/`)
       .then((response) => {
         setBlogs(response.data);
         setLoading(false);
