@@ -16,15 +16,14 @@ const Footer = () => {
             style={{ width: "110px", height: "38px", marginBottom: "8px" }}  
           />
           <Text fontSize="sm" color="gray.600" mt={2}>
-            With Estate One, you don’t just buy, manage, or sell. You strategize. Unlock potential.
-            Navigate markets and achieve your real estate goals.
+          At Estate One, you don’t just buy, manage, or sell — you strategize, unlock potential and navigate markets to achieve your real estate goals.
           </Text>
         </Box>
 
         {/* Quick Links */}
         <VStack align="flex-start" spacing={2}>
           <Text fontSize="lg" fontWeight="bold">Quick Links</Text>
-          <Link as={RouterLink} to="/partner" fontSize="sm" color="gray.700" _hover={{ textDecoration: "underline" }}>Partner with us</Link>
+          <Link as={RouterLink} to="/partner" fontSize="sm" color="gray.700" _hover={{ textDecoration: "underline" }}>Partner with Us</Link>
           <Link as={RouterLink} to="/career" fontSize="sm" color="gray.700" _hover={{ textDecoration: "underline" }}>Career</Link>
           <Link as={RouterLink} to="/blog" fontSize="sm" color="gray.700" _hover={{ textDecoration: "underline" }}>Blogs</Link>
           <Link as={RouterLink} to="/faqs" fontSize="sm" color="gray.700" _hover={{ textDecoration: "underline" }}>FAQs</Link>
@@ -40,7 +39,7 @@ const Footer = () => {
         {/* Support */}
         <VStack align="flex-start" spacing={2}>
           <Text fontSize="lg" fontWeight="bold">Support</Text>
-          <Link as={RouterLink} to="/contact" fontSize="sm" color="gray.700" _hover={{ textDecoration: "underline" }}>Contact us</Link>
+          <Link as={RouterLink} to="/contact" fontSize="sm" color="gray.700" _hover={{ textDecoration: "underline" }}>Contact Us</Link>
           
           {/* Social Media Links with Custom Images */}
           <HStack spacing={4} mt={2}>

@@ -46,7 +46,12 @@ const faqs = [
   },
   {
     question: "What does EstateOne specialize in?",
-    answer: "EstateOne specializes in comprehensive real estate advisory, including:\n  •BUYING: Guiding you through property selection and investment strategies.\n  •MANAGING: Efficient management solutions for long-term and short-term rentals.\n  •SELLING: Strategic marketing and selling to maximize your property's value.",
+    answer: [
+      "EstateOne specializes in comprehensive real estate advisory, including:",
+      "• BUYING: Guiding you through property selection and investment strategies.",
+      "• MANAGING: Efficient management solutions for long-term and short-term rentals.",
+      "• SELLING: Strategic marketing and selling to maximize your property's value."
+    ]
   },
   {
     question: "Why choose EstateOne for real estate advisory?",
@@ -120,7 +125,15 @@ const FAQs = () => {
               {/* Collapsible Answer */}
               <Collapse in={openIndex === index} animateOpacity>
                 <Text fontSize="sm" mt={2}>
-                  {faq.answer}
+                {Array.isArray(faq.answer) ? (
+    faq.answer.map((line, idx) => (
+      <Text key={idx} mb={1}>
+        {line}
+      </Text>
+    ))
+  ) : (
+    <Text>{faq.answer}</Text>
+  )}
                 </Text>
               </Collapse>
             </Box>

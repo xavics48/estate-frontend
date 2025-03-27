@@ -23,12 +23,12 @@ const HowWeWork = () => {
       items: [
         "Schedule a Consultation (Meet 1)",
         "Explore Market & Investment Areas",
-        "Property tours with our Advisor",
+        "Property Tour with our Advisor",
         "Strategic Planning Session (Meet 2)",
-        "Ongoing crm support and insights",
         "Negotiate & Secure the Best Deal",
+        "Ongoing CRM support and insights",
         "Property updates and market trends",
-        "Pre-Possession Inspection",
+        "Pre-Possession Inspection*",
       ],
       ctaText: "Book a free call",
       ctaLink: "/buy",
@@ -47,7 +47,7 @@ const HowWeWork = () => {
         "Define your Objectives: Long Term Rental Income or Short Term Rental Income",
         "Property Inspection & Assessment",
         "For Long-Term Rentals: Tenant Screening & Maximized Rental Listings",
-        "For Short-Term Rentals: Complete setup & Strategic listings",
+        "For Short-Term Rentals:Complete Setup & Strategic Listings",
         "Management & Monitoring: For Long-Term Rentals: Secure Rent Collection & Property Maintenance.",
         "For Short-Term Rentals: Streamlined Guest Coordination & Dynamic Pricing",
         "Maximize Income Potential",
@@ -103,6 +103,7 @@ const HowWeWork = () => {
             spacing={4}
             h="full"
           >
+            
             <Text fontSize="xl" fontWeight="bold" color={section.color}>
               {section.title}
             </Text>
@@ -110,9 +111,16 @@ const HowWeWork = () => {
             <List spacing={3} flex="1">
               {section.items.map((item, i) => (
                 <ListItem key={i} display="flex" alignItems="center">
-                  <Icon as={FaChevronDown} color={section.color} mr={2} />
-                  {item}
-                </ListItem>
+                <Icon as={FaChevronDown} color={section.color} mr={2} />
+                <Box
+                  as="span"
+                  dangerouslySetInnerHTML={{
+                    __html: item
+                      .replace(/Long[- ]Term Rentals/gi, "<strong>Long-Term Rentals</strong>")
+                      .replace(/Short[- ]Term Rentals/gi, "<strong>Short-Term Rentals</strong>")
+                  }}
+                />
+              </ListItem>
               ))}
             </List>
 

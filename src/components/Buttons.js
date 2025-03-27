@@ -48,7 +48,7 @@ export const SecondaryButton = ({ text }) => {
 
   return (
     <Button 
-      border="2px solid #25D366"
+      border="2px solid #189d0e"
       color="white"
       bg="#189d0e"
        _active={{ transform: "scale(1.1)" }} 

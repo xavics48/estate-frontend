@@ -95,7 +95,7 @@ const whatsappUrl = "https://wa.me/918368626797";
                 <Text fontSize="sm" color="gray.600" mb={3}>
                   If you'd much rather prefer texting at your own pace, just hit us up on Whatsapp. 
                 </Text>
-                <Button bg="#25D366"  _active={{ transform: "scale(1.1)" }} 
+                <Button bg="#189d0e"  _active={{ transform: "scale(1.1)" }} 
         transition="transform 0.1s ease-in-out" onClick={() => window.location.href = whatsappUrl}color="white" _hover={{ bg: "#1EBE5D" }} w="full" leftIcon={<FaWhatsapp />}>
                   Whatsapp us
                 </Button>
