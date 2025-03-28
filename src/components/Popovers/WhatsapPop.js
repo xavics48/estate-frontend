@@ -60,7 +60,7 @@ export default function WhatsAppPopover({ isOpen, onClose }) {
 
           <ModalBody>
             <Flex direction="column" align="center" justify="center" textAlign="center">
-              <Image src="/images/Whatsapp_POP.svg" alt="WhatsApp Assistance" boxSize="100px" mb={4} />
+              <Image src="/images/Whatsapp_POP.svg" loading= "lazy" alt="WhatsApp Assistance" boxSize="100px" mb={4} />
               <Text fontSize="md" fontWeight="medium" maxW="359px" mb={4}>
                 If you don’t find your de sired slot, no worries! You can still WhatsApp us your queries, and we’ll be happy to assist you.
               </Text>

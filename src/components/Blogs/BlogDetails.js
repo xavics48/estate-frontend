@@ -30,7 +30,7 @@ const BlogDetails = () => {
             {blog.title}
           </Text>
           <HStack spacing={4} bg="gray.100" px={4} py={2} borderRadius="full" boxShadow="sm">
-            <Image src={blog.author.image} boxSize="40px" borderRadius="full" />
+            <Image src={blog.author.image} loading= "lazy" boxSize="40px" borderRadius="full" />
             <Text fontWeight="bold">{blog.author.name}</Text>
             <Text>{blog.reading_time} min read</Text>
             <HStack spacing={3}>
@@ -44,7 +44,7 @@ const BlogDetails = () => {
 
         {/* Blog Image (Right) */}
         <Box flex="1">
-          <Image src={blog.image} borderRadius="xl" objectFit="cover" />
+          <Image src={blog.image} loading= "lazy" borderRadius="xl" objectFit="cover" />
         </Box>
       </Flex>
 

@@ -42,7 +42,7 @@ const BlogSection = () => {
     <Link as={RouterLink} to={`/blog-details/${blogs[0]?.id}`}>
       <Text fontSize="md" fontWeight="bold">Read all →</Text>
     </Link>
-    <Image src={blogs[0]?.image} alt="Blog Main" w="100%" borderRadius="lg" />
+    <Image src={blogs[0]?.image} loading= "lazy" alt="Blog Main" w="100%" borderRadius="lg" />
   </VStack>
 
   {/* Right - Blog List */}

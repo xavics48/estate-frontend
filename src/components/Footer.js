@@ -11,6 +11,7 @@ const Footer = () => {
         {/* Left Section - Logo & Description */}
         <Box maxW="250px" textAlign="left">
           <img 
+          loading= "lazy"
             src="/images/logo.svg"  
             alt="logo" 
             style={{ width: "110px", height: "38px", marginBottom: "8px" }}  
@@ -44,20 +45,20 @@ const Footer = () => {
           {/* Social Media Links with Custom Images */}
           <HStack spacing={4} mt={2}>
             <Link href="http://www.youtube.com/@estateone_india" target="_blank">
-              <Image src="images/youtube.svg" alt="YouTube" width="40px" />
+              <Image src="images/youtube.svg" loading= "lazy" alt="YouTube" width="40px" />
             </Link>
             <Link href="https://wa.me/918368626797" target="_blank">
-              <Image src="images/whatsapp.svg" alt="Whatsapp" width="27px" />
+              <Image src="images/whatsapp.svg" loading= "lazy" alt="Whatsapp" width="27px" />
             </Link>
             
             <Link href="https://www.linkedin.com/company/estateone/" target="_blank">
-              <Image src="images/linkedin.svg" alt="LinkedIn" width="35px" />
+              <Image src="images/linkedin.svg" loading= "lazy"alt="LinkedIn" width="35px" />
             </Link>
             <Link href="https://www.instagram.com/estateone.in?igsh=MXNrdHd0b3J0aHkwZA==" target="_blank">
-              <Image src="images/instagram.svg" alt="Instagram" width="30px" />
+              <Image src="images/instagram.svg" aloading= "lazy"lt="Instagram" width="30px" />
             </Link>
             <Link href="https://www.facebook.com/profile.php?id=61569533714774" target="_blank">
-              <Image src="images/facebook.svg" alt="Facebook" width="30px" />
+              <Image src="images/facebook.svg" loading= "lazy"alt="Facebook" width="30px" />
             </Link>
           </HStack>
         </VStack>
