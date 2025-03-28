@@ -16,7 +16,7 @@ const Footer = () => {
             style={{ width: "110px", height: "38px", marginBottom: "8px" }}  
           />
           <Text fontSize="sm" color="gray.600" mt={2}>
-          At Estate One, you don’t just buy, manage, or sell — you strategize, unlock potential and navigate markets to achieve your real estate goals.
+          At EstateOne, you don’t just buy, manage, or sell — you strategize, unlock potential and navigate markets to achieve your real estate goals.
           </Text>
         </Box>
 

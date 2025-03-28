@@ -31,7 +31,7 @@ const WhatWeDo = () => {
 
       {/* Description */}
       <Text fontSize="md" color="gray.700" mt={3} maxW="950px" mx="auto">
-        From finding the perfect property to handing over the keys, we're with you every step of the way.With expert advice,
+        From finding the perfect property to handing over the keys, we're with you every step of the way. With expert advice,
         seamless processes, and a dedicated CRM to keep everything on track, we ensure you feel confident and cared for throughout your journey.
         Whether it’s your dream home or a smart investment, we make real estate simple, stress-free, and truly yours.
       </Text>

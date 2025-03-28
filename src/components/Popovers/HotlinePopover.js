@@ -97,7 +97,7 @@ const whatsappUrl = "https://wa.me/918368626797";
                 </Text>
                 <Button bg="#189d0e"  _active={{ transform: "scale(1.1)" }} 
         transition="transform 0.1s ease-in-out" onClick={() => window.location.href = whatsappUrl}color="white" _hover={{ bg: "#1EBE5D" }} w="full" leftIcon={<FaWhatsapp />}>
-                  Whatsapp us
+                  Whatsapp Us
                 </Button>
               </Box>
             </Flex>

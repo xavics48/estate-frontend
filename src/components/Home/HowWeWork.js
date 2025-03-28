@@ -65,7 +65,7 @@ const HowWeWork = () => {
         "Schedule a consultation (Meet 1)",
         "EstateOne Approval & Strategic Collaboration",
         "Property Tour with our Advisor",
-        "Evaluate Market Value &Finalize Selling Price",
+        "Evaluate Market Value & Finalize Selling Price",
         "Targeted Marketing Exposure",
         "Qualified Buyer Screening",
         "Organise Property Showings",
