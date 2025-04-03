@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+/* Fix blurry SVGs on Safari */
+svg {
+  transform: translateZ(0); /* Force GPU rendering */
+  shape-rendering: crispEdges; /* Optimize edges */
+}
+
+/* Override font smoothing for icon-like SVGs */
+.svg-icon {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img[src*=".svg"] {
+  transform: translateZ(0);
+  shape-rendering: crispEdges;
+}

@@ -16,6 +16,8 @@ import {
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaPhoneAlt, FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
 import PropertyAdvicePopover from "./Popovers/HotlinePopover";
+import { ReactComponent as Logo } from "../Logo.svg";
+
 
 const Header = () => {
   const { isOpen, onToggle, onClose } = useDisclosure();
@@ -81,13 +83,14 @@ const Header = () => {
       <Flex justify="space-between" align="center">
         {/* ✅ Logo */}
         <ChakraLink as={Link} to="/" display="inline-flex" alignItems="center">
-          <Image 
-            src="/images/logo.svg" 
-            alt="EstateOne Logo" 
-            h={{ base: "35px", md: "40px" }} 
-            maxW="100%" 
-          />
-        </ChakraLink>
+  <Box h={{ base: "35px", md: "40px" }} 
+     maxW="100%">
+    <Logo width="100%" height="100%" 
+    
+      />
+  </Box>
+</ChakraLink>
+
 
         {/* ✅ Desktop Navigation */}
         <Flex gap={6} fontWeight="bold" fontSize="md" display={{ base: "none", md: "flex" }} alignItems="center">
