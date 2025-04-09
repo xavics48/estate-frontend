@@ -1,6 +1,10 @@
 import React from "react";
 import { Box, Text, VStack, Grid, Image, Container } from "@chakra-ui/react";
 
+import { ReactComponent as AgentIcon } from "../../images/expert/agent_icon.svg";
+import { ReactComponent as ChatIcon } from "../../images/expert/chat_icon.svg";
+import { ReactComponent as FolderIcon } from "../../images/expert/folder_icon.svg";
+import { ReactComponent as FreeIcon } from "../../images/expert/free_icon.svg";
 const ExpertSection = () => {
   return (
     <Box as="section" position="relative" w="100vw">
@@ -66,7 +70,12 @@ const ExpertSection = () => {
               transition="all 0.3s ease-in-out"
               _hover={{ transform: "translateY(-5px)", boxShadow: "lg" }}
             >
-              <Image src={card.icon} alt={card.title} boxSize="30px" />
+              {/* Conditionally Render the Correct Icon */}
+              {card.icon === "agent" && <AgentIcon />}
+              {card.icon === "folder" && <FolderIcon />}
+              {card.icon === "chat" && <ChatIcon />}
+              {card.icon === "free" && <FreeIcon />}
+
               <Text fontSize="lg" fontWeight="bold">{card.title}</Text>
               <Text fontSize="sm" color="gray.600">{card.description}</Text>
             </VStack>
@@ -80,25 +89,24 @@ const ExpertSection = () => {
 // Cards Data
 const expertCards = [
   {
-    icon: "/images/agent_icon.svg",
+    icon: "agent", // Reference the icon name
     title: "No Pushy Agents",
     description: "Say goodbye to pushy agents. Our team is made up of knowledgeable advisors who prioritize your needs, not hard sales pitches."
   },
   {
-    icon: "/images/folder_icon.svg",
+    icon: "folder", // Reference the icon name
     title: "No Spam Ever",
     description: "We respect your time and privacy. At EstateOne, we ensure a spam-free experience—no unexpected calls or emails."
   },
   {
-    icon: "/images/chat_icon.svg",
+    icon: "chat", // Reference the icon name
     title: "30 min Consultation",
     description: "Your time matters. We dedicate at least 30 minutes to understand your needs, offering tailored advice with complete focus."
   },
   {
-    icon: "/images/free_icon.svg",
+    icon: "free", // Reference the icon name
     title: "100% Free",
     description: "Our consultations are completely free, with no pressure to buy or commit. We're here to guide you in making confident decisions."
   }
 ];
-
 export default ExpertSection;

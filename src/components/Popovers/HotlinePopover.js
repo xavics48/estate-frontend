@@ -13,7 +13,10 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { FaRegCalendarAlt, FaWhatsapp } from "react-icons/fa";
-import SchedulePopover from "./SchedulePopover"; // ✅ Import SchedulePopover
+import SchedulePopover from "./SchedulePopover";
+import {ReactComponent as ImagePopover2} from "../../images/hotline/imagePopover2.svg";
+import { ReactComponent as WhatsappIcon } from "../../images/hotline/whatsapp_icon.svg";
+import { ReactComponent as ContactAgentIcon } from "../../images/hotline/contact_agent.svg";
 
 export default function PropertyAdvicePopover({ isOpen, onClose }) {
   const [isScheduleOpen, setIsScheduleOpen] = useState(false); // ✅ State for Schedule Popover
@@ -36,7 +39,10 @@ const whatsappUrl = "https://wa.me/918368626797";
         >
           <ModalCloseButton position="absolute" top={4} right={4} />
           <Box bgGradient="linear(to-b, #FDF3E3, #FAF8F5)" borderTopRadius="xl" p={6}>
-            <Image src="/images/imagePopover2.svg" alt="Property Advice" boxSize={{ base: "80px", md: "100px" }} mb={4} mx="auto" />
+          
+          <Box display="flex" justifyContent="center" mb={3}>
+          <ImagePopover2 alt="Property Advice" width="100px" height="100px" mb={4} mx="auto" />
+          </Box>
             <Text fontSize={{ base: "lg", md: "xl" }} fontWeight="bold" mb={2}>
               Get Personalized Property Advice!
             </Text>
@@ -56,7 +62,7 @@ const whatsappUrl = "https://wa.me/918368626797";
                 textAlign="left"
               >
                 <Flex align="center" gap={2} mb={2}>
-                  <Image src="/images/contact_agent.svg" alt="Call Icon" boxSize="35px" />
+                <ContactAgentIcon alt="Call Icon" width="35px" height="35px" />
                   <Text fontWeight="bold">Get on a Call with Us</Text>
                 </Flex>
                 <Text fontSize="sm" color="gray.600" mb={3}>
@@ -89,7 +95,7 @@ const whatsappUrl = "https://wa.me/918368626797";
                 textAlign="left"
               >
                 <Flex align="center" gap={2} mb={2}>
-                  <Image src="/images/whatsapp_icon.svg" alt="WhatsApp Icon" boxSize="35px" />
+                <WhatsappIcon alt="WhatsApp Icon" width="35px" height="35px" />
                   <Text fontWeight="bold">Whatsapp us</Text>
                 </Flex>
                 <Text fontSize="sm" color="gray.600" mb={3}>

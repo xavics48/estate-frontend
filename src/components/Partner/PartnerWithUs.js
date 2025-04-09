@@ -1,26 +1,31 @@
 import React from "react";
 import { Box, Text, VStack,Grid, Image } from "@chakra-ui/react";
 
+import { ReactComponent as Partner1 } from "../../images/Partner/partner1.svg";
+import { ReactComponent as Partner2 } from "../../images/Partner/partner2.svg";
+import { ReactComponent as Partner3 } from "../../images/Partner/partner3.svg";
+import { ReactComponent as Partner4 } from "../../images/Partner/partner4.svg";
+
 const partnerBenefits = [
   {
     title: "Smart Dashboard",
     description: "Track deals & payments in one place",
-    image: "/images/partner1.svg",
+    image: <Partner1 />
   },
   {
     title: "Instant Notifications",
     description: "Stay updated effortlessly",
-    image: "/images/partner2.svg",
+    image: <Partner2 />
   },
   {
     title: "Exclusive Property Access",
     description: "Early insights on EstateOne listing",
-    image: "/images/partner3.svg",
+    image: <Partner3 />
   },
   {
     title: "Secure Transactions",
     description: "Trust and transparency at every step",
-    image: "/images/partner4.svg",
+    image: <Partner4 />
   },
 ];
 
@@ -54,13 +59,14 @@ const PartnerWithUs = () => {
             width="100%"
           >
             {/* Image */}
-            <Image src={benefit.image} alt={benefit.title} boxSize={{ base: "50px", md: "60px" }} />
-
+            <Box boxSize={{ base: "50px", md: "60px" }}>
+              {benefit.image}
+            </Box>
             {/* Title */}
             <Text fontSize={{ base: "md", md: "lg" }} fontWeight="bold">
               {benefit.title}
             </Text>
-
+          
             {/* Description */}
             <Text fontSize={{ base: "sm", md: "md" }} color="gray.600">
               {benefit.description}

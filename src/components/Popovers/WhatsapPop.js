@@ -7,12 +7,12 @@ import {
   ModalHeader,
   ModalBody,
   Flex,
-  Image,
   Text,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import SchedulePopover from "./SchedulePopover";
 import { FaWhatsapp } from "react-icons/fa";
+import { ReactComponent as WhatsappPop } from "../../images/whatsapp_popup/Whatsapp_POP.svg";
 
 export default function WhatsAppPopover({ isOpen, onClose }) {
   const [isScheduleOpen, setIsScheduleOpen] = useState(false);
@@ -60,7 +60,7 @@ export default function WhatsAppPopover({ isOpen, onClose }) {
 
           <ModalBody>
             <Flex direction="column" align="center" justify="center" textAlign="center">
-              <Image src="/images/Whatsapp_POP.svg" loading= "lazy" alt="WhatsApp Assistance" boxSize="100px" mb={4} />
+            <WhatsappPop alt="WhatsApp Assistance" width="100px" height="100px" mb={4} />
               <Text fontSize="md" fontWeight="medium" maxW="359px" mb={4}>
                 If you don’t find your de sired slot, no worries! You can still WhatsApp us your queries, and we’ll be happy to assist you.
               </Text>

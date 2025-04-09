@@ -1,7 +1,10 @@
 import React from "react";
 import { Box, Text, VStack, Grid, Button, Stack } from "@chakra-ui/react";
 import { PrimaryButton, SecondaryButton } from "../Buttons";
-import { ReactComponent as Icon } from "../../manage_icon.svg";
+
+import { ReactComponent as BuyIcon } from "../../images/whatwedo/buy_icon.svg";
+import { ReactComponent as ManageIcon } from "../../images/whatwedo/manage_icon.svg";
+import { ReactComponent as SaleIcon } from "../../images/whatwedo/sale_icon.svg";
 
 const WhatWeDo = () => {
   return (
@@ -35,8 +38,10 @@ const WhatWeDo = () => {
       <Grid templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }} gap={6} mt={10} maxW="1200px" mx="auto">
         {services.map((service, index) => (
           <Box key={index} sx={styles.card}>
-            {/* Use the Icon component */}
-            <Icon src={service.icon} alt={service.title} />
+            {/* Render the correct Icon component based on the service */}
+            {service.icon === "buy" && <BuyIcon />}
+            {service.icon === "manage" && <ManageIcon />}
+            {service.icon === "sale" && <SaleIcon />}
 
             <Button bg="yellow.100" color="yellow.700" fontSize="sm" fontWeight="bold" borderRadius="full" px={4} py={1} _hover={{ bg: "yellow.200" }}>
               {service.buttonText}
@@ -57,23 +62,24 @@ const WhatWeDo = () => {
 const services = [
   { 
     title: "Discover Tailored Property Solutions for You", 
-    icon: "/images/buy_icon.svg", 
+    icon: "buy",
     buttonText: "BUY",
     description: "Whether you're seeking your dream home, investment property, or commercial space..."
   },
   { 
     title: "Let Us Manage Your Property, Maximize Your Returns", 
-     icon: "/images/manage_icon.svg", 
+    icon: "manage",
     buttonText: "MANAGE",
     description: "We take care of everything—from finding tenants and managing rent to handling finances..."
   },
   { 
     title: "Sell Your Property with Confidence", 
-    icon: "/images/sale_icon.svg", 
+    icon: "sale",
     buttonText: "SELL",
     description: "Get the right value for your property with our transparent, end-to-end selling services..."
   }
 ];
+
 
 // Card Styles
 const styles = {

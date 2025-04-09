@@ -1,6 +1,8 @@
 import React from "react";
 import { Box, Text, Image, VStack, Flex } from "@chakra-ui/react";
 
+import { ReactComponent as CareerHeroImage } from "../../images/career/career_hero.svg";
+
 const CareerHero = () => {
   return (
     <Box 
@@ -51,11 +53,10 @@ const CareerHero = () => {
 
         {/* Right Section - Image */}
         <Box w={{ base: "90%", sm: "80%", md: "500px" }} mx="auto">
-          <Image 
-            src="/images/career_hero.svg" // ✅ Replace with actual image path
+        <CareerHeroImage
             alt="Career at EstateOne"
-            w="100%"
-            borderRadius="10px"
+            width="100%" // Control the width and other styles
+            style={{ borderRadius: "10px" }} // Apply border-radius for a smooth look
           />
         </Box>
       </Flex>

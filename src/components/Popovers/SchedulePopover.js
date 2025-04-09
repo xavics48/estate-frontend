@@ -9,6 +9,8 @@ import WhatsapPop from "./WhatsapPop";
 import QueryPopover from "./QueryPopover";
 import axios from "axios";
 import { DateTime } from "luxon";
+import { ReactComponent as ContactAgentIcon } from "../../images/hotline/contact_agent.svg";
+import { ReactComponent as Logo} from "../../Logo.svg";
 
 const generateDates = (numDays = 7) => {
   const days = [];
@@ -177,11 +179,7 @@ const SchedulePopover = ({ isOpen, onClose }) => {
   {/* Content Section */}
   <VStack align="start" spacing={4} mt={3}>
     <HStack spacing={3}>
-      <Image
-        src="/images/contact_agent.svg"
-        alt="Logo"
-        w={{ base: "20px", md: "30px" }}
-      />
+      <ContactAgentIcon alt="Call Icon" width="35px" height="35px" />
       <Text
         fontSize={{ base: "14px", md: "18px" }}
         fontWeight="bold"
@@ -210,10 +208,9 @@ const SchedulePopover = ({ isOpen, onClose }) => {
     mt={{ base: 4, md: 0 }} // Add margin-top on mobile to separate from text
     w="full" // Ensure it takes full width on mobile
   >
-    <Image
-      src="/images/logo.svg"
+    <Logo
       alt="Contact Agent"
-      w={{ base: "60px", md: "100px" }}
+      width="80px" height="55px" 
     />
   </Flex>
 </Box>

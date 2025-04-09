@@ -5,7 +5,6 @@ import ApplyCareer from "../components/Career/applyCareer";
 const Career = () => {
     return (
       <div>
-    
         <CareerHero />
         <ApplyCareer/>
         <FAQs/>

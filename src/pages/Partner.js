@@ -8,7 +8,6 @@ import PartnerFinalSection from "../components/Partner/PartnerFinalSection";
 const Partner = () => {
     return (
       <div>
-        
         <PartnerHero />
         <PartnerWithUs/>
         <PartnerWork/>

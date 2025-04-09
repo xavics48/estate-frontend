@@ -3,8 +3,10 @@ import { Box, Text, Image, VStack, Flex, Stack } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules"; 
 import "swiper/css";
-
 import { PrimaryButton, SecondaryButton } from "../Buttons";
+
+import heroImage from "../../images/hero/hero_image1.png";
+import { ReactComponent as GoogleRating } from "../../images/hero/google_rating.svg";
 
 const HeroSection = () => {
   return (
@@ -66,8 +68,7 @@ const HeroSection = () => {
             align={{ base: "center", md: "start" }} // ✅ Centered in mobile, left-aligned in desktop
             w="full" // ✅ Ensures full width for alignment
           >
-            <Image 
-              src="/images/google_rating.svg" 
+            <GoogleRating 
               alt="Google Rating" 
               w={{ base: "100px", md: "120px", lg: "140px" }} 
               mx={{ base: "auto", md: "0" }} // ✅ Centers image in mobile
@@ -105,8 +106,8 @@ const HeroSection = () => {
             style={{ width: "100%", borderRadius: "10px" }}
           >
             <SwiperSlide>
-              <Image 
-                src="/images/hero_image1.png" 
+            <Image 
+                src={heroImage} 
                 alt="Hero Image"
                 w="100%" 
                 maxH={{ base: "460px", md: "auto" }} 

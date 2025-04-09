@@ -3,7 +3,7 @@ import { Box, Text, useDisclosure, Image ,Button} from "@chakra-ui/react";
 import { FaCalendarAlt } from "react-icons/fa";
 import ContactModal from "./contactModal"; // ✅ Importing Modal Component
 import { PrimaryButton } from "../Buttons";
-
+import{ReactComponent as ContactAgent} from "../../images/contact/contact_agent.svg";
 const ContactHero = () => {
   const { isOpen, onClose } = useDisclosure();
 
@@ -50,7 +50,7 @@ const ContactHero = () => {
        alignItems="center"
        mt="-80px" 
       >
-        <Image src="/images/contact_agent.svg" alt="Expert" boxSize="60px" mx="auto" />
+       <ContactAgent alt="Expert" width="60px" height="60px" mx="auto" />
         <Text fontSize="lg" fontWeight="bold" mt={3}>
           Buying, Managing, or Selling? We’ve Got Your Back
         </Text>

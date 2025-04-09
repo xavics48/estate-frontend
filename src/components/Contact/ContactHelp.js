@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Box, Text, HStack, Button, Image } from "@chakra-ui/react";
+import { Box, Text, HStack, Button, Image, Center } from "@chakra-ui/react";
 import { FaCalendarAlt, FaWhatsapp } from "react-icons/fa";
 import SchedulePopover from "../Popovers/SchedulePopover";
+import {ReactComponent as HomeIcon} from "../../images/contact/home_icon.svg";
 
 const ContactHelp = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -16,7 +17,9 @@ const ContactHelp = () => {
         mx="auto"
       >
         {/* Icon */}
-        <Image src="/images/home_icon.svg" alt="Support Icon" boxSize="65px" mx="auto" mb={3} />
+        <Box display="flex" justifyContent="center" mb={3}>
+          <HomeIcon alt="Support Icon" width="65px" height="65px" />
+        </Box>
 
         {/* Text */}
         <Text fontSize="md" color="gray.700" maxW="700px" mx="auto" fontWeight="medium">

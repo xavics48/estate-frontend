@@ -2,6 +2,9 @@ import React from "react";
 import { Box, Text, VStack, HStack, Grid, Link, Icon, Image } from "@chakra-ui/react";
 import {  FaWhatsapp, FaAngleRight } from "react-icons/fa";
 import { AtSignIcon } from '@chakra-ui/icons';
+import { ReactComponent as QuestionIcon } from "../../images/contact/question_icon.svg";
+import { ReactComponent as EmailIcon } from "../../images/contact/email_icon.svg";
+
 
 const ContactFAQ = () => {
   return (
@@ -42,7 +45,7 @@ const ContactFAQ = () => {
             alignItems="center" 
             justifyContent="center"
           >
-            <Image src="/images/question_icon.svg" alt="FAQ Icon" boxSize="30px" />
+            <QuestionIcon alt="FAQ Icon" width="30px" height="30px" />
           </Box>
           <HStack>
           <Text mt={3} fontSize="xl" fontWeight="bold">Popular Questions We Answer:</Text>
@@ -102,7 +105,7 @@ const ContactFAQ = () => {
             alignItems="center" 
             justifyContent="center"
           >
-            <Image src="/images/email_icon.svg" alt="FAQ Icon" boxSize="30px" />
+             <EmailIcon alt="Escalation Icon" width="30px" height="30px" />
           </Box>
           <HStack>
           <Text fontSize="xl" mt={3} fontWeight="bold">Escalation Procedure</Text>

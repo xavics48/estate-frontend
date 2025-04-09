@@ -3,6 +3,10 @@ import { Box, Text, VStack, HStack, Grid, Link, Image, Icon } from "@chakra-ui/r
 import { FaWhatsapp, FaCheck } from "react-icons/fa"; // ✅ WhatsApp & Email Icons Restored
 import { AtSignIcon } from '@chakra-ui/icons';
 
+
+import { ReactComponent as PartnerHandShakeIcon } from "../../images/Partner/handshake_icon.svg"; 
+import { ReactComponent as PartnerQuestionIcon } from "../../images/Partner/question_icon.svg";
+
 const PartnerFinalSection = () => {
   
   return (
@@ -33,7 +37,7 @@ const PartnerFinalSection = () => {
             alignItems="center" 
             justifyContent="center"
           >
-            <Image src="/images/question_icon.svg" alt="Why EstateOne?" boxSize="30px" />
+            <PartnerQuestionIcon alt="Why EstateOne?" width="30px" height="30px" />
           </Box>
           
           <Text fontSize="xl" fontWeight="bold" mt={-4}>Why EstateOne?</Text>
@@ -75,7 +79,7 @@ const PartnerFinalSection = () => {
             alignItems="center" 
             justifyContent="center"
           >
-            <Image src="/images/handshake_icon.svg" alt="Partner Success" boxSize="30px" />
+             <PartnerHandShakeIcon alt="Partner Success" width="30px" height="30px" />
           </Box>
 
           <Text fontSize="xl" fontWeight="bold" mt={-4}>Let's Build Success Together!</Text>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Box, Text, HStack, Image, Button, Flex, List, ListItem, Icon } from "@chakra-ui/react";
 import { FaCheckCircle } from "react-icons/fa";
+import { ReactComponent as HouseIcon } from "../../images/takecare/house_icon.svg";
 
 const TakeCareSection = () => {
   const [activeTab, setActiveTab] = useState("buyers");
@@ -100,12 +101,12 @@ const TakeCareSection = () => {
 
         {/* Right Side - Image with Branding */}
         <Box flex="1" display="flex" justifyContent="center">
-          <Image 
-          loading= "lazy"
-            src="/images/house_icon.svg" 
+          {/* Render the HouseIcon as a React component */}
+          <HouseIcon
+            loading="lazy"
             alt="House" 
-            w={{ base: "90%", sm: "400px", md: "450px", lg: "480px" }}  
-            maxW="500px"
+            width={{ base: "90%", sm: "400px", md: "450px", lg: "480px" }}  
+            maxWidth="500px"
           />
         </Box>
 
