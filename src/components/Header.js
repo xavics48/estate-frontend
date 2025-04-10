@@ -82,6 +82,7 @@ const Header = () => {
     >
       <Flex justify="space-between" align="center">
         {/* ✅ Logo */}
+        <Box justifyContent={"flex-start"} alignItems="center" display="flex" >
         <ChakraLink as={Link} to="/" display="inline-flex" alignItems="center">
   <Box h={{ base: "35px", md: "40px" }} 
      maxW="100%">
@@ -90,6 +91,8 @@ const Header = () => {
       />
   </Box>
 </ChakraLink>
+        </Box>
+  
 
 
         {/* ✅ Desktop Navigation */}

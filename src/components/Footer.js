@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Flex, Text, Link, VStack, HStack, Image } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
-// import PrivacyPolicy from "./Legal/PrivacyPolicy";
+import { ReactComponent as Logo } from "../Logo.svg";
 
 const Footer = () => {
   return (
@@ -10,12 +10,9 @@ const Footer = () => {
         
         {/* Left Section - Logo & Description */}
         <Box maxW="250px" textAlign="left">
-          <img 
-          loading= "lazy"
-            src="/images/logo.svg"  
-            alt="logo" 
-            style={{ width: "110px", height: "38px", marginBottom: "8px" }}  
-          />
+              <Logo width="50%" height="60%" 
+              
+                />
           <Text fontSize="sm" color="gray.600" mt={2}>
           At EstateOne, you don’t just buy, manage, or sell — you strategize, unlock potential and navigate markets to achieve your real estate goals.
           </Text>

@@ -220,7 +220,7 @@ export default function QueryPopover({ isOpen, onClose, selectedSlotId }) {
           </Box>
             {/* Info Textarea */}
              <Box mb={1}>
-            <Text mb={1} fontWeight="bold">How did you get to know about EsateOne*</Text>
+            <Text mb={1} fontWeight="bold">How did you get to know about EstateOne*</Text>
             <Textarea 
               size="sm" 
               h="50px" 
