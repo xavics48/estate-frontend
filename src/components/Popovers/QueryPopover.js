@@ -245,7 +245,7 @@ export default function QueryPopover({ isOpen, onClose, selectedSlotId }) {
 
               isDisabled={!name || !email || !phone || !query || !selectedSlotId || !selectedOption || (location === "other" && !customLocation)} 
             >
-              Next →
+             Submit →
             </Button>
           </Flex>
         </ModalBody>
