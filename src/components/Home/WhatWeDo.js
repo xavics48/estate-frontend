@@ -64,19 +64,19 @@ const services = [
     title: "Discover Tailored Property Solutions for You", 
     icon: "buy",
     buttonText: "BUY",
-    description: "Whether you're seeking your dream home, investment property, or commercial space..."
+    description: "Whether you're seeking your dream home, investment property, or commercial space, our experts provide personalized guidance to help you make an informed decision based on your needs."
   },
   { 
     title: "Let Us Manage Your Property, Maximize Your Returns", 
     icon: "manage",
     buttonText: "MANAGE",
-    description: "We take care of everything—from finding tenants and managing rent to handling finances..."
+    description: "We take care of everything—from finding tenants and managing rent to handling finances and ensuring everything is compliant. Let us make your property profitable and stress-free"
   },
   { 
     title: "Sell Your Property with Confidence", 
     icon: "sale",
     buttonText: "SELL",
-    description: "Get the right value for your property with our transparent, end-to-end selling services..."
+    description: "Get the right value for your property with our transparent, end-to-end selling services. We provide honest market evaluations and connect you with genuine buyers, ensuring a smooth and rewarding selling experience."
   }
 ];
 

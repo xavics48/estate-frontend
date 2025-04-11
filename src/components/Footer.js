@@ -10,7 +10,7 @@ const Footer = () => {
         
         {/* Left Section - Logo & Description */}
         <Box maxW="250px" textAlign="left">
-              <Logo width="50%" height="60%" 
+              <Logo width="50%" height="30%" 
               
                 />
           <Text fontSize="sm" color="gray.600" mt={2}>
