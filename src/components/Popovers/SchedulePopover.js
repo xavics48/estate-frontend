@@ -76,7 +76,7 @@ const SchedulePopover = ({ isOpen, onClose }) => {
   const fetchAvailableSlots = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('https://estate-backend-lsps.onrender.com/api/available_slots/');
+      const response = await axios.get(`https://estate-backend-lsps.onrender.com/api/available_slots/`);
 
       
        console.log("Raw API Response:", response.data);
@@ -131,8 +131,8 @@ const SchedulePopover = ({ isOpen, onClose }) => {
     if (modifier === 'PM') {
       hours = parseInt(hours, 10) + 12;
     }
+    return `${hours}:${minutes}`;
 
-    return ${hours}:${minutes};
   };
 
   return (
@@ -325,7 +325,7 @@ const SchedulePopover = ({ isOpen, onClose }) => {
                           })
                           .map((slot) => (
                             <Button 
-                              key={${slot.id}-afternoon}
+                              key={`${slot.id}-afternoon`}
                               variant={selectedSlotId === slot.id ? "solid" : "outline"}
                               borderRadius="15px"
                               width="min-content"
@@ -368,7 +368,7 @@ const SchedulePopover = ({ isOpen, onClose }) => {
                           })
                           .map((slot) => (
                             <Button 
-                              key={${slot.id}-afternoon}
+                              key={`${slot.id}-afternoon`}
                               variant={selectedSlotId === slot.id ? "solid" : "outline"}
                               borderRadius="15px"
                               width="min-content"
@@ -411,7 +411,7 @@ const SchedulePopover = ({ isOpen, onClose }) => {
                           })
                           .map((slot) => (
                             <Button 
-                              key={${slot.id}-evening}
+                              key={`${slot.id}-evening`}
                               variant={selectedSlotId === slot.id ? "solid" : "outline"}
                               borderRadius="15px"
                               width="min-content"
