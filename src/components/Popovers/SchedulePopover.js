@@ -9,8 +9,6 @@ import WhatsapPop from "./WhatsapPop";
 import QueryPopover from "./QueryPopover";
 import axios from "axios";
 import { DateTime } from "luxon";
-import { ReactComponent as ContactAgentIcon } from "../../images/hotline/contact_agent.svg";
-import { ReactComponent as Logo} from "../../Logo.svg";
 
 const generateDates = (numDays = 7) => {
   const days = [];
@@ -78,8 +76,10 @@ const SchedulePopover = ({ isOpen, onClose }) => {
   const fetchAvailableSlots = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`https://estate-backend-lsps.onrender.com/api/available_slots/`);
-      console.log("Raw API Response:", response.data);
+      const response = await axios.get('https://estate-backend-lsps.onrender.com/api/available_slots/');
+
+      
+       console.log("Raw API Response:", response.data);
 
       const formattedSlots = {};
       const datesData = response.data.dates || {};
@@ -132,7 +132,7 @@ const SchedulePopover = ({ isOpen, onClose }) => {
       hours = parseInt(hours, 10) + 12;
     }
 
-    return `${hours}:${minutes}`;
+    return ${hours}:${minutes};
   };
 
   return (
@@ -179,7 +179,11 @@ const SchedulePopover = ({ isOpen, onClose }) => {
   {/* Content Section */}
   <VStack align="start" spacing={4} mt={3}>
     <HStack spacing={3}>
-      <ContactAgentIcon alt="Call Icon" width="35px" height="35px" />
+      <Image
+        src="/images/contact_agent.svg"
+        alt="Logo"
+        w={{ base: "20px", md: "30px" }}
+      />
       <Text
         fontSize={{ base: "14px", md: "18px" }}
         fontWeight="bold"
@@ -208,9 +212,10 @@ const SchedulePopover = ({ isOpen, onClose }) => {
     mt={{ base: 4, md: 0 }} // Add margin-top on mobile to separate from text
     w="full" // Ensure it takes full width on mobile
   >
-    <Logo
+    <Image
+      src="/images/logo.svg"
       alt="Contact Agent"
-      width="80px" height="55px" 
+      w={{ base: "60px", md: "100px" }}
     />
   </Flex>
 </Box>
@@ -297,6 +302,50 @@ const SchedulePopover = ({ isOpen, onClose }) => {
               {/* Time Slots */}
               {selectedDate && availableSlots[selectedDate.fullDate]?.length > 0 && (
                 <VStack align="stretch" spacing={4}>
+
+                {/* Morning Section */}
+                {availableSlots[selectedDate.fullDate]?.filter(slot => {
+                    const time24Hour = convert12to24Hour(slot.start);
+                    const hour = parseInt(time24Hour.split(':')[0]);
+                    return hour >= 9 && hour < 12;
+                  }).length > 0 && (
+                    <Box>
+                      <HStack mb={4} spacing={2}>
+                        <Image src="/images/evening_icon.svg" alt="Afternoon" boxSize="24px" />
+                        <Text fontSize="md" fontWeight="semibold" color="gray.700">
+                          Morning
+                        </Text>
+                      </HStack>
+                      <Grid templateColumns={{ base: "repeat(3, 1fr)", sm: "repeat(4, 1fr)", md: "repeat(5, 1fr)" }} gap={2}>
+                        {availableSlots[selectedDate.fullDate]
+                          ?.filter(slot => {
+                            const time24Hour = convert12to24Hour(slot.start);
+                            const hour = parseInt(time24Hour.split(':')[0]);
+                            return hour >= 9 && hour < 12;
+                          })
+                          .map((slot) => (
+                            <Button 
+                              key={${slot.id}-afternoon}
+                              variant={selectedSlotId === slot.id ? "solid" : "outline"}
+                              borderRadius="15px"
+                              width="min-content"
+                              h="40px"
+                              px={3}
+                              _hover={{ bg: selectedSlotId === slot.id ? "yellow.500" : "gray.50" }}
+                              onClick={() => handleSlotSelect(slot)}
+                              fontSize="sm"
+                              fontWeight="bold"
+                              color={selectedSlotId === slot.id ? "white" : "gray.700"}
+                              bg={selectedSlotId === slot.id ? "yellow.500" : "white"}
+                              borderColor={selectedSlotId === slot.id ? "yellow.500" : "gray.200"}
+                            >
+                              {convertToSelectedTimezone(slot.start, selectedTimezone)}
+                            </Button>
+                          ))}
+                      </Grid>
+                    </Box>
+                  )}
+
                   {/* Afternoon Section */}
                   {availableSlots[selectedDate.fullDate]?.filter(slot => {
                     const time24Hour = convert12to24Hour(slot.start);
@@ -319,7 +368,7 @@ const SchedulePopover = ({ isOpen, onClose }) => {
                           })
                           .map((slot) => (
                             <Button 
-                              key={`${slot.id}-afternoon`}
+                              key={${slot.id}-afternoon}
                               variant={selectedSlotId === slot.id ? "solid" : "outline"}
                               borderRadius="15px"
                               width="min-content"
@@ -362,7 +411,7 @@ const SchedulePopover = ({ isOpen, onClose }) => {
                           })
                           .map((slot) => (
                             <Button 
-                              key={`${slot.id}-evening`}
+                              key={${slot.id}-evening}
                               variant={selectedSlotId === slot.id ? "solid" : "outline"}
                               borderRadius="15px"
                               width="min-content"
